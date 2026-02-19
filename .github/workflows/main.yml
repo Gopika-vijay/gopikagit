@@ -15,4 +15,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Display success message
-        run: echo "🎉 GitHub Actions is working successfully!"
+        run: echo "GitHub Actions is working successfully!"
