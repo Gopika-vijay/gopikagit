@@ -1,7 +1,18 @@
-push:
-branches:["main"]
-pull-request:
-branches:["main"]
+name: First GitHub Action
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
 jobs:
-build:
-runs-on:ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Display success message
+        run: echo "🎉 GitHub Actions is working successfully!"
